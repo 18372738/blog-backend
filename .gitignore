@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+myvenv/
+*.Identifier
+
 
 # C extensions
 *.so
