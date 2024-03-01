@@ -28,9 +28,9 @@
               <div class="card blog__slide text-center">
                 <div class="blog__slide__img">
                 {% if post.image_url%}
-                  <img class="card-img rounded-0" src={{post.image_url}} alt="">
+                  <img class="card-img rounded-0" src={{post.image_url}} alt="Изображение из поста">
                 {% else %}
-                  <img class="img-fluid" src={% static "img/banner/blog.png" %} alt="">
+                  <img class="img-fluid" src={% static "img/banner/blog.png" %} alt="Баннер сайта">
                 {% endif %}
                 </div>
                 <div class="blog__slide__content">
