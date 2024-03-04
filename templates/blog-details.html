@@ -30,11 +30,11 @@
         <div class="row">
           <div class="col-lg-8">
             <div class="main_blog_details">
-            {% if post.image_url %}
-              <img class="img-fluid" src={{post.image_url}} alt="Изображение из поста">
-            {% else %}
-              <img class="img-fluid" src={% static "img/banner/blog.png" %} alt="Баннер сайта">
-            {% endif%}
+              {% if post.image_url %}
+                <img class="img-fluid" src={{post.image_url}} alt="Изображение из поста">
+              {% else %}
+                <img class="img-fluid" src={% static "img/banner/blog.png" %} alt="Баннер сайта">
+              {% endif%}
               <h4>{{post.title}}</h4>
               <div class="user_details">
                 <div class="mt-sm-0 mt-3">
@@ -58,11 +58,9 @@
                 </div>
               </div>
             </div>
-
-
-            <div class="comments-area">
-              <h4>{{post.comments|length}} Comments</h4>
-              {% for comment in post.comments%}
+          <div class="comments-area">
+            <h4>{{post.comments|length}} Comments</h4>
+            {% for comment in post.comments%}
               <div class="comment-list">
                 <div class="single-comment justify-content-between d-flex">
                   <div class="user justify-content-between d-flex">
@@ -70,7 +68,7 @@
                       <h5><a href="#">{{comment.author}}</a></h5>
                       <p class="date">{{comment.published_at}} </p>
                       <p class="comment">
-                          {{comment.text}}
+                        {{comment.text}}
                       </p>
                     </div>
                   </div>
@@ -80,9 +78,9 @@
                   </div>
                 </div>
               </div>
-              {% endfor %}
-            </div>
+            {% endfor %}
           </div>
+        </div>
 
 
           <!-- Start Blog Post Siddebar -->
